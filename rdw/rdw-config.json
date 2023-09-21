@@ -1,6 +1,6 @@
 {
     "django_root_path": "backend",
-    "django_app_path": "$django_root_path/backend",
+    "django_app_path": "$django_root_path/main",
 
     "react_root_path": "frontend",
     "react_app_path": "$react_root_path/."

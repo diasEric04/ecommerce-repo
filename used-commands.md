@@ -10,3 +10,9 @@ alteração, ele pergunta se deve buildar e ajustar no projeto do django (automa
 + `git add .` -> adiciono tudo para posteriormente dar o commit
 + `git commit -m "<mensagem...>"` -> dou commit nas "alterações" (na realidade é o primeiro commit)
 + `git push origin master` -> dou push nos arquivos, commitados anteriormente, para o github
++ `python -c "from secrets import SystemRandom as Sr; import string as s; print(''.join(Sr().choices(s.digits + s.punctuation + s.ascii_letters, k=60)))"` -> cria um chave de 60 caracteres, usada posteriormente no arquivo de configuração do django por .env
++ `python -m venv venv` -> cria um ambiente virtual do python (as libs instaladas estarão dentro do arquivo "backend/requirements.txt")
++ `. venv/Scripts/activate` -> ativa o ambiente virtual (linux seria: `. venv/bin/activate`)
++ `pip install Django psycopg2-binary pillow django-summernote` -> instalo as libs usadas no projeto
++ `docker-compose up --build` -> builda da imagens e containers do docker para rodar o projeto e o banco de dados postgresql
++ `npx crate-react-app frontend --template typescript` -> cria um projeto react com typescript
