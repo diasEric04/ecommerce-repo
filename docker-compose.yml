@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  ecommerceapp:
+    container_name: ecommerceapp
+    env_file:
+      - ./dotenv_files/.env
+    depends_on:
+      - psql2
+    ports:
+      - 8000:8000
+    volumes:
+      - ./ecommerceapp:/ecommerceapp
+      - ./ecommerceapp/data/web/static:/ecommerceapp/data/web/static/
+      - ./ecommerceapp/data/web/media:/ecommerceapp/data/web/media/
+    build:
+      context: .
+  psql3:
+    container_name: psql3
+    image: postgres:13-alpine
+    volumes: 
+      - ./ecommerceapp/data/postgres/data:/var/lib/postgresql/data/
+    env_file:
+      - ./dotenv_files/.env
