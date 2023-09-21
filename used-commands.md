@@ -16,3 +16,4 @@ alteração, ele pergunta se deve buildar e ajustar no projeto do django (automa
 + `pip install Django psycopg2-binary pillow django-summernote` -> instalo as libs usadas no projeto
 + `docker-compose up --build` -> builda da imagens e containers do docker para rodar o projeto e o banco de dados postgresql
 + `npx crate-react-app frontend --template typescript` -> cria um projeto react com typescript
++ `python run_rdw.py` -> inicializa o watcher do react-django, que ao receber qualquer atualização do react (frontend/) perguntará se deseja atualizar no django (backend/).
