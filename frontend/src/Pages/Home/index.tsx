@@ -1,4 +1,4 @@
-import { Component } from '../../types/components';
+import { Component } from '../types';
 
 export const Home: Component = () => {
   return (

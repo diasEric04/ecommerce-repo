@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-import { Signin } from './Pages/Signin';
-import { Signup } from './Pages/Signup';
-import { Home } from './Pages/Home';
-import { Menu } from './Components/Menu';
+import { AppRouter } from './Components/AppRouter';
+import { theme } from './styles/theme';
+import { GlobalStyle } from './styles/global-style';
+import { CssRemedy } from './styles/css-remedy';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -13,13 +14,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Menu />
-      <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="signin/" element={<Signin />} />
-        <Route path="signup/" element={<Signup />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <CssRemedy />
+      <GlobalStyle />
+      <AppRouter />
+    </ThemeProvider>
   </React.StrictMode>,
 );

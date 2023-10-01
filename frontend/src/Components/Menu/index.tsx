@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Component } from '../../types/components';
+import { Component } from '../../Pages/types';
 
 export const Menu: Component = () => {
   return (
